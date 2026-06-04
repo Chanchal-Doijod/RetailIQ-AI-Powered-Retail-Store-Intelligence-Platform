@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+
+  backend:
+    build: .
+    container_name: store_intelligence_api
+
+    ports:
+      - "8000:8000"
+
+    volumes:
+      - ./data:/app/data
+
+    environment:
+      EVENTS_OUTPUT: data/output/events.jsonl
+      POS_PATH: data/resources/pos_transactions.csv
+
+    restart: unless-stopped

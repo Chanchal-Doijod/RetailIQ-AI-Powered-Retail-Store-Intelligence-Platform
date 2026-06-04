@@ -1,0 +1,53 @@
+# ====================================================================
+# CRITICAL: HEAVY FILES & LARGE DATA (Keeps GitHub light and fast)
+# ====================================================================
+# Block the 6.5MB YOLO model weights and any other ML formats
+yolov8n.pt
+*.pt
+*.onnx
+*.engine
+
+# Block the massive 8.3MB structure dump file
+structure.txt
+
+# Challenge videos (too large for GitHub)
+data/store1/
+data/store2/
+
+# Block all log files that grow over time
+*.log
+logs/
+
+# ====================================================================
+# FRONTEND (Prevents heavy node modules and build files from uploading)
+# ====================================================================
+frontend/node_modules/
+frontend/dist/
+
+# ====================================================================
+# PYTHON VIRTUAL ENVIRONMENTS & CACHES
+# ====================================================================
+# Block the local virtual environment folder
+venv/
+.venv/
+env/
+ENV/
+
+# Block Python compilation caches and test caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# ====================================================================
+# CONFIGS, SYSTEM & IDE FILES
+# ====================================================================
+.env
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+data/store1/
+data/store2/

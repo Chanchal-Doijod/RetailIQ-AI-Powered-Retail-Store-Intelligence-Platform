@@ -1,0 +1,16 @@
+# Block the massive Windows virtual environment
+venv/
+
+# Block the frontend (This Dockerfile is only for your Python backend)
+frontend/
+
+# Block heavy text logs and test caches
+structure.txt
+.pytest_cache/
+
+# Block data directories (handled via volumes)
+data/
+
+# Block Git configuration files
+.git
+.gitignore
